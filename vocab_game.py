@@ -8,6 +8,10 @@ if "ans1_val" not in st.session_state:
     st.session_state.ans1_val = ""
 if "ans2_val" not in st.session_state:
     st.session_state.ans2_val = ""
+if "ans3_val" not in st.session_state:
+    st.session_state.ans3_val = ""
+if "ans4_val" not in st.session_state:
+    st.session_state.ans4_val = ""
 
 
 # 📌 ฟังก์ชันเคลียร์ค่าเมื่อกดปุ่มเริ่มใหม่
@@ -47,13 +51,13 @@ def show_result_dialog(ans1, ans2):
     else:
         st.error(f"❌ ข้อ 2: ยังไม่ถูกต้อง (คุณตอบ '{u_ans2}')")
         # ตรวจข้อ 3
-    if u_ans3 == "banana":
+        if u_ans3 == "banana":
         st.success("✅ ข้อ 3: ถูกต้อง")
         score += 1
     else:
         st.error(f"❌ ข้อ 3: ยังไม่ถูกต้อง (คุณตอบ '{u_ans3}')")
         # ตรวจข้อ 4
-    if u_ans4 == "watermalon":
+        if u_ans4 == "watermalon":
         st.success("✅ ข้อ 4: ถูกต้อง")
         score += 1
     else:
@@ -63,7 +67,7 @@ def show_result_dialog(ans1, ans2):
     
 
     st.info(f"🏆 ได้คะแนนรวม: {score} คะแนน")
-
+    
     if score == 4:
         st.success("🎉 You win!")
     else:
@@ -117,9 +121,9 @@ if "start" in st.session_state and not st.session_state.get("is_ended", False):
     if st.button("📥 ส่งคำตอบ"):
         st.session_state.is_ended = True
         st.rerun()
-
-    time.sleep(1)
-    st.rerun()
+        
+        time.sleep(1)
+        st.rerun()
 
 # 5. แสดง Dialog ผลลัพธ์
 if st.session_state.get("is_ended", False):
