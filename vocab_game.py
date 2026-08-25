@@ -97,11 +97,11 @@ ans2 = st.text_input(
     value=st.session_state.ans2_val,
 )
 ans3 = st.text_input(
-    "ข้อ 3: Monkey love to eat `ba_ _ _ _ `. 🍌",
+    "ข้อ 3: Monkey love to eat `ba _ _ na`. 🍌",
     value=st.session_state.ans3_val,
 )
 ans4 = st.text_input(
-    "ข้อ 4: Hippo love to eat `Wa_ _ _ _  _lon `. 🍉",
+    "ข้อ 4: Hippo love to eat `Wa _ _ _ _ _lon `. 🍉",
     value=st.session_state.ans4_val,
 )
 # อัปเดตค่าล่าสุดเข้าตัวแปร
