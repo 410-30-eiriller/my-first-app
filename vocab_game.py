@@ -110,21 +110,16 @@ st.session_state.ans1_val = ans1
 st.session_state.ans2_val = ans2
 st.session_state.ans3_val = ans3
 st.session_state.ans4_val = ans4
-# ✏️ [พื้นที่สำหรับนักเรียน]: เพิ่มข้อ 3, 4 ตรงนี้
-
-
 # 4. ปุ่มส่งคำตอบ
 if "start" in st.session_state and not st.session_state.get("is_ended", False):
     if st.button("📥 ส่งคำตอบ"):
         st.session_state.is_ended = True
-        st.rerun()
-        
+        st.rerun()    
         time.sleep(1)
         st.rerun()
 
 # 5. แสดง Dialog ผลลัพธ์
 if st.session_state.get("is_ended", False):
     show_result_dialog(ans1, ans2, ans3, ans4)
-
 st.divider()
 st.write("นายแอลล์ริลฟ์เล่อณ์ ฮิง เลขที่ 30 ม.4/10")
